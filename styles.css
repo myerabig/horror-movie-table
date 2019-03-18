@@ -1,0 +1,44 @@
+@font-face{
+    font-family: "KreepTown";
+    src: url("KreepTown.otf");
+}
+
+@font-face{
+    font-family: "Nightmare Pills";
+    src: url("nightmarepills.ttf");
+}
+
+@font-face{
+    font-family: "Spooky Light";
+    src: url("spookylight.ttf");
+}
+
+*{
+    color: orange;
+    font-family: "KreepTown";
+}
+
+h1{
+    text-align: center;
+    font-family: "Nightmare Pills";
+}
+
+th{
+    font-family: "Spooky Light";
+}
+
+.searchbar{
+    margin: auto;
+}
+
+.searchOption{
+    font-family: "Trebuchet MS";
+}
+
+.title img{
+    display: none;
+}
+
+.title:hover img{
+    display: block;
+}

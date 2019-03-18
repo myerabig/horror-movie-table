@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Favorite Horror Movies</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="mainpage.js"></script>
+    </head>
+    <body bgcolor="black">
+        <table cols="3" align="center" cellspacing="10">
+            <tr>
+                <td><img src="bloodyknife.png" alt="knife" height="60"/></td>
+                <td><h1>YOUR GUIDE TO THE OBJECTIVELY BEST HORROR MOVIES</h1></td>
+                <td><img src="bloodyknife.png" alt="knife" height="60"/></td>
+            </tr>
+        </table>
+        <input id="titleSearchbar" class="searchbar" type="text" placeholder="Search by title..." onChange="titleSearch()" style="display: block"/>
+        <input id="yearSearchbar" class="searchbar" type="text" placeholder="Search by year..." onChange="yearSearch()" style="display: none"/>
+        <input id="directorSearchbar" class="searchbar" type="text" placeholder="Search by director..." onChange="directorSearch()" style="display: none"/>
+        <input id="actorSearchbar" class="searchbar" type="text" placeholder="Search by actor..." onChange="actorSearch()" style="display: none"/>
+        <table cols="4" align="center" cellspacing="20">
+            <tr>
+                <td id="titleOption" class="searchOption" onClick="changeToTitle()" style="font-style: bold"><u>Title</u></td>
+                <td id="yearOption" class="searchOption" onClick="changeToYear()"><u>Year</u></td>
+                <td id="directorOption" class="searchOption" onClick="changeToDirector()"><u>Director</u></td>
+                <td id="actorOption" class="searchOption" onClick="changeToActor()"><u>Actor</u></td>
+            </tr>
+        </table>
+        <br/>
+
+        <table id="movieChart" cols="8" width="95%" border="5" align="center" cellpadding="10">
+            <tr>
+                <th width="14%">Title</th>
+                <th width="3%">Release Year</th>
+                <th width="10%">Director</th>
+                <th width="2%">IMDB Rating/10</th>
+                <th width="10%">Subgenre</th>
+                <th width="15%">Lead Actor(s)</th>
+                <th width="45%">Plot Summary</th>
+                <th width="2%">Runtime (minutes)</th>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=xHuOtLTQ_1I" target="_blank">Halloween</a><img src="halloween1978.jpg" width="200"/></td>
+                <td class="releaseYear">1978</td>
+                <td class="director">John Carpenter</td>
+                <td><a href="https://www.imdb.com/title/tt0077651/" target="_blank">7.8</a></td>
+                <td>Slasher</td>
+                <td class="actors">Jamie Lee Curtis<br/>Nick Castle</td>
+                <td>On a cold Halloween night in 1963, six year old Michael Myers brutally murdered his 17-year-old sister, Judith. He was sentenced and locked away for 15 years. But on October 30, 1978, while being transferred for a court date, a 21-year-old Michael Myers steals a car and escapes Smith's Grove. He returns to his quiet hometown of Haddonfield, Illinois, where he looks for his next victims.</td>
+                <td align="center">91</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=ek1ePFp-nBI" target="_blank">Halloween</a><img src="halloween2018.jpg" width="200"/></td>
+                <td class="releaseYear">2018</td>
+                <td class="director">David Gordon Green</td>
+                <td><a href="https://www.imdb.com/title/tt1502407/" target="_blank">6.7</a></td>
+                <td>Slasher</td>
+                <td class="actors">Jamie Lee Curtis<br/>Nick Castle</td>
+                <td>It's been 40 years since Laurie Strode survived a vicious attack from crazed killer Michael Myers on Halloween night. Locked up in an institution, Myers manages to escape when his bus transfer goes horribly wrong. Laurie now faces a terrifying showdown when the masked madman returns to Haddonfield, Ill. -- but this time, she's ready for him.</td>
+                <td align="center">104</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=WCO4v-pFBns" target="_blank">Friday the 13th</a><img src="fridaythe13th.jpg" width="200"/></td>
+                <td class="releaseYear">1980</td>
+                <td class="director">Sean S. Cunningham</td>
+                <td><a href="https://www.imdb.com/title/tt0080761/" target="_blank">6.5</a></td>
+                <td>Slasher</td>
+                <td class="actors">Adrienne King<br/>Betsy Palmer<br/>Ari Lehman<br/>Kevin Bacon<br/>Jeannine Taylor<br/>Harry Crosby<br/>Mark Nelson</td>
+                <td>Crystal Lake's history of murder doesn't deter counselors from setting up a summer camp in the woodsy area. Superstitious locals warn against it, but the fresh-faced young people -- Jack, Alice, Bill, Marcie, and Ned -- pay little heed to the old-timers. Then they find themselves stalked by a brutal killer. As they're slashed, shot and stabbed, the counselors struggle to stay alive against a merciless opponent.</td>
+                <td align="center">95</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=HEew7zvpAWE" target="_blank">The Shining<img src="theshining.jpg" width="200"/></a></td>
+                <td class="releaseYear">1980</td>
+                <td class="director">Stanley Kubrick</td>
+                <td><a href="https://www.imdb.com/title/tt0081505/" target="_blank">8.4</a></td>
+                <td>Psychological</td>
+                <td class="actors">Jack Nicholson<br/>Shelley Duvall<br/>Danny Lloyd</td>
+                <td>Jack Torrance becomes winter caretaker at the isolated Overlook Hotel in Colorado, hoping to cure his writer's block. He settles in along with his wife, Wendy, and his son, Danny, who is plagued by psychic premonitions. As Jack's writing goes nowhere and Danny's visions become more disturbing, Jack discovers the hotel's dark secrets and begins to unravel into a homicidal maniac hell-bent on terrorizing his family.</td>
+                <td align="center">146</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=sRfnevzM9kQ" target="_blank">Get Out<img src="getout.jpg" width="200"/></a></td>
+                <td class="releaseYear">2017</td>
+                <td class="director">Jordan Peele</td>
+                <td><a href="https://www.imdb.com/title/tt5052448/" target="_blank">7.7</a></td>
+                <td>Thriller</td>
+                <td class="actors">Daniel Kaluuya<br/>Allison Williams<br/>Bradley Whitford<br/>Catherine Keener</td>
+                <td>Now that Chris and his girlfriend, Rose, have reached the meet-the-parents milestone of dating, she invites him for a weekend getaway upstate with Missy and Dean. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.</td>
+                <td align="center">104</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=NDdPz3SDhHk/" target="_blank">The Boy<img src="theboy.jpg" width="200"/></a></td>
+                <td class="releaseYear">2016</td>
+                <td class="director">William Brent Bell</td>
+                <td><a href="https://www.imdb.com/title/tt3882082/" target="_blank">6</a></td>
+                <td>Mystery</td>
+                <td class="actors">Lauren Cohan<br/>James Russell<br/>Jett Klyne</td>
+                <td>A young American named Greta takes a job as a nanny for an 8-year-old boy in a remote English village. To her surprise, Greta learns that the child of her new employers is a life-size doll. They care for the doll as if it was human, which helps the couple to cope with the death of their own son 20 years earlier. When Greta violates a list of strict rules, a series of disturbing and inexplicable events bring her worst fears to life, leading her to believe that the doll is alive.</td>
+                <td align="center">98</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=6LiKKFZyhRU" target="_blank">Lights Out<img src="lightsout.jpg" width="200"/></a></td>
+                <td class="releaseYear">2016</td>
+                <td class="director">David Sandberg</td>
+                <td><a href="https://www.imdb.com/title/tt4786282/" target="_blank">6.3</a></td>
+                <td>Mystery</td>
+                <td class="actors">Teresa Palmer<br/>Maria Bello<br/>Gabriel Bateman</td>
+                <td>When Rebecca left home, she thought that her childhood fears were behind her. As a young girl growing up, she was never really sure of what was real when the lights went out at night. Now, her little brother Martin is experiencing the same unexplained and terrifying events that jeopardized her safety and sanity. Holding a mysterious attachment to their mother, a supernatural entity has returned with a vengeance to torment the entire family.</td>
+                <td align="center">81</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=m5JO8wtNnzQ" target="_blank">It<img src="it1990.jpg" width="200"/></a></td>
+                <td class="releaseYear">1990</td>
+                <td class="director">Tommy Lee Wallace</td>
+                <td><a href="https://www.imdb.com/title/tt0099864/" target="_blank">6.9</a></td>
+                <td>Drama</td>
+                <td class="actors">Emily Perkins<br/>Harry Anderson<br/>John Ritter<br/>Richard Thomas<br/>Tim Reid<br/>Adam Faraizl</td>
+                <td>In 1960, seven preteen outcasts fight an evil demon that poses as a child-killing clown. Thirty years later, they reunite to stop the demon once and for all when it returns to their hometown.</td>
+                <td align="center">192</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=xKJmEC5ieOk" target="_blank">It<img src="it2017.jpg" width="200"/></a></td>
+                <td class="releaseYear">2017</td>
+                <td class="director">Andres Muschietti</td>
+                <td><a href="https://www.imdb.com/title/tt1396484/" target="_blank">7.4</a></td>
+                <td>Drama</td>
+                <td class="actors">Finn Wolfhard<br/>Sophia Lillis<br/>Bill Skarsgard<br/>Jaeden Lieberher<br/>Jack Dylan Grazer<br/>Wyatt Oleff<br/>Chosen Jacobs<br/>Jeremy Ray Taylor</td>
+                <td>Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.</td>
+                <td align="center">135</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="http://www.youtube.com/watch?v=mtLSnysHMYc" target="_blank">The Exorcist<img src="theexorcist.jpg" width="200"/></a></td>
+                <td class="releaseYear">1973</td>
+                <td class="director">William Friedkin</td>
+                <td><a href="https://www.imdb.com/title/tt0070047/" target="_blank">8</a></td>
+                <td>Supernatural</td>
+                <td class="actors">Linda Blair<br/>Max von Sydow<br/>Ellen Burstyn<br/>Jason Miller</td>
+                <td>When young Regan starts acting odd -- levitating, speaking in tongues -- her worried mother seeks medical help, only to hit a dead end. A local priest, however, thinks the girl may be seized by the devil. The priest makes a request to perform an exorcism, and the church sends in an expert to help with the difficult job.</td>
+                <td align="center">132</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=3e_yI2_Mu3g" target="_blank">Hereditary<img src="hereditary.jpg" width="200"/></a></td>
+                <td class="releaseYear">2018</td>
+                <td class="director">Ari Aster</td>
+                <td><a href="https://www.imdb.com/title/tt7784604/" target="_blank">7.3</a></td>
+                <td>Drama</td>
+                <td class="actors">Milly Shapiro<br/>Alex Wolff<br/>Toni Collette<br/>Gabriel Byrne</td>
+                <td>When the matriarch of the Graham family passes away, her daughter and grandchildren begin to unravel cryptic and increasingly terrifying secrets about their ancestry, trying to outrun the sinister fate they have inherited.</td>
+                <td align="center">127</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="http://www.youtube.com/watch?v=ZBDiJkLU3Ro" target="_blank">The Cabin in the Woods<img src="thecabininthewoods.jpg" width="200"/></a></td>
+                <td class="releaseYear">2011</td>
+                <td class="director">Drew Goddard</td>
+                <td><a href="https://www.imdb.com/title/tt1259521/" target="_blank">7</a></td>
+                <td>Mystery</td>
+                <td class="actors">Kristen Conolly<br/>Chris Hemsworth<br/>Anna Hutchison<br/>Fran Kanz<br/>Jesse Williams</td>
+                <td>When five college friends arrive at a remote forest cabin for a little vacation, little do they expect the horrors that await them. One by one, the youths fall victim to backwoods zombies, but there is another factor at play. Two scientists are manipulating the ghoulish goings-on, but even as the body count rises, there is yet more at work than meets the eye.</td>
+                <td align="center">95</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=tH-dZY_6-b0" target="_blank">A Quiet Place<img src="aquietplace.jpg" width="200"/></a></td>
+                <td class="releaseYear">2018</td>
+                <td class="director">John Krasinski</td>
+                <td><a href="https://www.imdb.com/title/tt6644200/" target="_blank">7.6</a></td>
+                <td>Thriller</td>
+                <td class="actors">John Krasinski<br/>Emily Blunt<br/>Millicent Simmonds<br/>Noah Jupe</td>
+                <td>If they hear you, they hunt you.</td>
+                <td align="center">91</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="http://www.youtube.com/watch?v=3hIvvho2T1k" target="_blank">Jaws<img src="jaws.jpg" width="200"/></a></td>
+                <td class="releaseYear">1975</td>
+                <td class="director">Steven Spielberg</td>
+                <td><a href="https://www.imdb.com/title/tt0073195/" target="_blank">8</a></td>
+                <td>Drama</td>
+                <td class="actors">Roy Schneider<br/>Richard Dreyfuss<br/>Robert Shaw<br/>Lorraine Gary</td>
+                <td>When a young woman is killed by a shark while skinny-dipping near the New England tourist town of Amity Island, police chief Martin Brody wants to close the beaches, but mayor Larry Vaughn overrules him, fearing that the loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper and grizzled ship captain Quint offer to help Brody capture the killer beast, and the trio engage in an epic battle of man vs. nature.</td>
+                <td align="center">130</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="https://www.youtube.com/watch?v=Q_P8WCbhC6s" target="_blank">Hush<img src="hush.jpg" width="200"/></a></td>
+                <td class="releaseYear">2016</td>
+                <td class="director">Mike Flanagan</td>
+                <td><a href="https://www.imdb.com/title/tt5022702/" target="_blank">6.6</a></td>
+                <td>Thriller</td>
+                <td class="actors">Kate Siegel<br/>John Gallagher Jr.<br/>Michael Trucco</td>
+                <td>A deaf writer who retreated into the woods to live a solitary life must fight for her life in silence when a masked killer appears in her window.</td>
+                <td align="center">87</td>
+            </tr>
+            <tr class="row">
+                <td class="title"><a href="http://www.youtube.com/watch?v=eZmN_3xZxUU" target="_blank">Jennifer's Body<img src="jennifersbody.jpg" width="200"/></a></td>
+                <td class="releaseYear">2009</td>
+                <td class="director">Karyn Kusama</td>
+                <td><a href="https://www.imdb.com/title/tt1131734/" target="_blank">5.2</a></td>
+                <td>Comedy</td>
+                <td class="actors">Megan Fox<br/>Amanda Seyfried<br/>Adam Brody<br/>Johnny Simmons</td>
+                <td>When a demon takes possession of her, high-school hottie Jennifer turns a hungry eye on guys who never stood a chance with her before. While evil Jennifer satisfies her appetite for human flesh with the school's male population, her nerdy friend, Needy, learns what's happening and vows to put an end to the carnage.</td>
+                <td align="center">107</td>
+            </tr>
+        </table>
+        <table id="searchTable" cols="8" style="display: none" width="95%" border="5" align="center" cellpadding="10"></table>
+        <br/>
+        <br/>
+    </body>
+</html>
