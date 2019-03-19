@@ -1,16 +1,16 @@
 @font-face{
     font-family: "KreepTown";
-    src: url("KreepTown.otf");
+    src: url("../assets/KreepTown.otf");
 }
 
 @font-face{
     font-family: "Nightmare Pills";
-    src: url("nightmarepills.ttf");
+    src: url("../assets/nightmarepills.ttf");
 }
 
 @font-face{
     font-family: "Spooky Light";
-    src: url("spookylight.ttf");
+    src: url("../assets/spookylight.ttf");
 }
 
 *{
